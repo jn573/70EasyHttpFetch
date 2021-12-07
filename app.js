@@ -1,17 +1,23 @@
 const http = new EasyHTTP()
 
-function run() {
-    http.get('https://jsonplaceholder.typicode.com/users')
-        .then(data => console.log(data))
-        .catch(err => console.log(err))
-}
-
 const data = {
-    name: 'Jimmy',
-    username: 'bleh',
-    email: 'me@this.com'
+    name: 'Evan Badass',
+    username: 'Glock19x',
+    email: 'cuteness@gmail.com'
 }
 
-http.get('https://jsonplaceholder.typicode.com/users', data)
+// http.get('https://jsonplaceholder.typicode.com/users', data)
+//     .then(data => console.log(data))
+//     .then(err => console.log(err))
+
+// http.post('https://jsonplaceholder.typicode.com/users', data)
+//     .then(data => console.log(data))
+//     .then(err => console.log(err))
+
+// http.put('https://jsonplaceholder.typicode.com/users/2', data)
+//     .then(data => console.log(data))
+//     .then(err => console.log(err))
+
+http.delete('https://jsonplaceholder.typicode.com/users/2')
     .then(data => console.log(data))
     .then(err => console.log(err))
